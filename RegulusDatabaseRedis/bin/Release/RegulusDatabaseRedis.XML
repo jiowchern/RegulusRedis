@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RegulusDatabaseRedis</name>
+    </assembly>
+    <members>
+        <member name="T:Regulus.Database.Redis.Client">
+            <summary>
+            redis expansion
+            </summary>
+        </member>
+        <member name="T:Regulus.Database.Redis.Client.ISerializeProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Regulus.Database.Redis.Client.Add``1(``0)">
+            <summary>
+            To increase a data database
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entry"></param>
+        </member>
+    </members>
+</doc>

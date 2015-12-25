@@ -1,0 +1,9 @@
+D:\Develop\RegulusDatabaseRedis\RegulusDatabaseRedis\bin\Release\RegulusDatabaseRedis.dll
+D:\Develop\RegulusDatabaseRedis\RegulusDatabaseRedis\bin\Release\RegulusDatabaseRedis.pdb
+D:\Develop\RegulusDatabaseRedis\RegulusDatabaseRedis\bin\Release\StackExchange.Redis.dll
+D:\Develop\RegulusDatabaseRedis\RegulusDatabaseRedis\bin\Release\StackExchange.Redis.pdb
+D:\Develop\RegulusDatabaseRedis\RegulusDatabaseRedis\bin\Release\StackExchange.Redis.xml
+D:\Develop\RegulusDatabaseRedis\RegulusDatabaseRedis\obj\Release\RegulusDatabaseRedis.dll
+D:\Develop\RegulusDatabaseRedis\RegulusDatabaseRedis\obj\Release\RegulusDatabaseRedis.pdb
+D:\Develop\RegulusDatabaseRedis\RegulusDatabaseRedis\bin\Release\RegulusDatabaseRedis.XML
+D:\Develop\RegulusDatabaseRedis\RegulusDatabaseRedis\obj\Release\RegulusDatabaseRedis.csprojResolveAssemblyReference.cache

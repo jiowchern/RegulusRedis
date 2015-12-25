@@ -1,0 +1,13 @@
+D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Release\UnitTest.dll
+D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Release\UnitTest.pdb
+D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Release\Newtonsoft.Json.dll
+D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Release\RegulusDatabaseRedis.dll
+D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Release\StackExchange.Redis.dll
+D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Release\RegulusDatabaseRedis.pdb
+D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Release\Newtonsoft.Json.xml
+D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Release\StackExchange.Redis.pdb
+D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Release\StackExchange.Redis.xml
+D:\Develop\RegulusDatabaseRedis\UnitTest\obj\Release\UnitTest.csprojResolveAssemblyReference.cache
+D:\Develop\RegulusDatabaseRedis\UnitTest\obj\Release\UnitTest.dll
+D:\Develop\RegulusDatabaseRedis\UnitTest\obj\Release\UnitTest.pdb
+D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Release\RegulusDatabaseRedis.xml
