@@ -340,7 +340,7 @@ namespace Regulus.Database.Redis
             }
             return count;
         }
-        public IEnumerable<T> Get<T>(Expression<Func<T, bool>> expression)
+        public IEnumerable<T> Find<T>(Expression<Func<T, bool>> expression)
         {
             var type = typeof(T);
             var members = _Database.SetMembers(_GetTypeKey(type.FullName));

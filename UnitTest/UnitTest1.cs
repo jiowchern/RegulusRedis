@@ -17,14 +17,12 @@ namespace RedisTest
     {
         private Regulus.Database.Redis.Client _Redis;
 
-        [ClassInitialize]
-        public void TestInitialize()
+        public UnitTestClient()
         {
             var redis = ConnectionMultiplexer.Connect("localhost:6379");
-            
-            _Redis = new Regulus.Database.Redis.Client(redis.GetDatabase() , new JsonSeriallzer());
-        }
 
+            _Redis = new Regulus.Database.Redis.Client(redis.GetDatabase(), new JsonSeriallzer());
+        }
         [TestMethod]
         public void TestMethod0()
         {
@@ -34,7 +32,7 @@ namespace RedisTest
             testObject.Value = 1345;
             _Redis.Add(testObject);
 
-            var results = _Redis.Get<TestObject>(test_object => test_object.Id == id);
+            var results = _Redis.Find<TestObject>(test_object => test_object.Id == id);
             Assert.AreEqual(1345, results.First().Value);
         }
 
@@ -47,7 +45,7 @@ namespace RedisTest
             testObject.Value = 1345;
             _Redis.Add(testObject);
 
-            var results = _Redis.Get<TestObject>(test_object => test_object.Id == id );
+            var results = _Redis.Find<TestObject>(test_object => test_object.Id == id );
             var result = results.First().Value;
             Assert.AreEqual(1345 , result);
         }
@@ -65,7 +63,7 @@ namespace RedisTest
             testObject.Value = 13451;
             _Redis.Update(test_object => test_object.Id == id, testObject);
 
-            var results = _Redis.Get<TestObject>(test_object => test_object.Id == id);
+            var results = _Redis.Find<TestObject>(test_object => test_object.Id == id);
             Assert.AreEqual(13451, results.First().Value);
         }
 
@@ -82,14 +80,14 @@ namespace RedisTest
             testObject.Value = 13451;
             _Redis.UpdateField<TestObject , int>(test_object => test_object.Id == id, test_object => test_object.Value , 9999);
 
-            var results = _Redis.Get<TestObject>(test_object => test_object.Id == id);
+            var results = _Redis.Find<TestObject>(test_object => test_object.Id == id);
             Assert.AreEqual(9999, results.First().Value);
         }
 
         [TestMethod]
         public void TestMethod5()
         {
-            var results = _Redis.Get<TestObject>(test_object => true).ToArray();
+            var results = _Redis.Find<TestObject>(test_object => true).ToArray();
             
         }
 
@@ -97,7 +95,7 @@ namespace RedisTest
         public void TestMethod6()
         {
             bool allPass = true;
-            var results = _Redis.Get<TestObject>(test_object => allPass).ToArray();
+            var results = _Redis.Find<TestObject>(test_object => allPass).ToArray();
 
         }
 
