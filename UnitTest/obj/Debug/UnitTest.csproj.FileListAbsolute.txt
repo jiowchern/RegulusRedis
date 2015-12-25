@@ -1,7 +1,6 @@
 D:\Develop\RegulusDatabaseRedis\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
 D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Debug\UnitTest.dll
 D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Debug\UnitTest.pdb
-D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Debug\Newtonsoft.Json.dll
 D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Debug\RegulusDatabaseRedis.dll
 D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Debug\StackExchange.Redis.dll
@@ -9,6 +8,5 @@ D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Debug\RegulusDatabaseRedis.pdb
 D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Debug\Newtonsoft.Json.xml
 D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Debug\StackExchange.Redis.pdb
 D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Debug\StackExchange.Redis.xml
-D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Debug\zh-Hant\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
 D:\Develop\RegulusDatabaseRedis\UnitTest\obj\Debug\UnitTest.dll
 D:\Develop\RegulusDatabaseRedis\UnitTest\obj\Debug\UnitTest.pdb

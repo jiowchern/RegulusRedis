@@ -389,7 +389,8 @@ namespace Regulus.Database.Redis
 
         private object _GetValue(Type type, RedisValue db_value)
         {
-            
+            if(db_value.IsNull)
+                return null;
             object value = null;
             if (Client._IsValueType(type))
             {
@@ -458,7 +459,6 @@ namespace Regulus.Database.Redis
 
             var key = _GetFieldByFieldTypes(id, fieldTypes.Skip(1).Take(fieldTypes.Length - 2));
 
-
             if (exp.NodeType == ExpressionType.ArrayIndex)
             {
                 var dbLength = _Database.HashLength(id);
@@ -479,11 +479,9 @@ namespace Regulus.Database.Redis
                 var type = typeof(TValue);
                 var keyName = _GetTypeKey(type.FullName);
 
-
                 _Database.SetRemove(keyName, id);
                 _Delete(id, type);
                 _AddRoot(value, type);
-
             }
         }
 
@@ -492,12 +490,20 @@ namespace Regulus.Database.Redis
             Type type = typeof(TValue);
             var prevValue = _Database.HashGet(key, name);
             _Delete(prevValue, type);
-            _Database.HashSet(
-                key,
-                new[]
-                {
-                    new HashEntry(name, _Serialization(type, value))
-                });
+            if(value != null)
+            {
+                _Database.HashSet(
+                    key,
+                    new[]
+                    {
+                        new HashEntry(name, _Serialization(type, value))
+                    });
+            }
+            else
+            {
+                _Database.HashDelete(key, name);
+            }
+            
         }
 
         private string _GetFieldByFieldTypes(string id, IEnumerable<Expression> field_types)

@@ -1,5 +1,6 @@
 # Foreword  
-Based StackExchange.Redis expansion libraries.  
+RegulusRedis is a redis client for C#.  
+It is based on StackExchange.Redis  
 The main technology is that when the object is stored in database to be split into individual Hash.  
 Library Link : https://www.nuget.org/packages/RegulusRedis/  
 
