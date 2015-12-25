@@ -24,7 +24,7 @@ client.Add(testObject);
 var testObjects = client.Find<TestObject>(t=> t.Id == 1);
 ```
 
-Updata all data
+### Updata all data
 ```C#
 var testObject2 = new TestObject();//The class is your custom.
 testObject2.Id = 1;
