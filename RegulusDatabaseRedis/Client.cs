@@ -88,7 +88,7 @@ namespace Regulus.Database.Redis
             var fields = type.GetFields();
             foreach(var field in fields)
             {
-                if(field.IsPublic)
+                if(field.IsPublic && field.IsStatic == false)
                 {
                     var value = _GetHashEntryField(entry, field);
                     if (value.HasValue)
@@ -329,8 +329,8 @@ namespace Regulus.Database.Redis
         
 
         private static bool _IsValueType(Type type)
-        {
-            return type.IsValueType || type == typeof(string);
+        {            
+            return type.IsValueType || type == typeof(string) ;
         }
 
         public int Exist<T>(Expression<Func<T, bool>> expression)
@@ -369,7 +369,7 @@ namespace Regulus.Database.Redis
             var propertys = type.GetProperties();
             foreach (var property in propertys)
             {
-                if (property.CanWrite)
+                if (property.CanWrite )
                 {
                     var dbValue = _Database.HashGet(id, property.Name);
                     if (dbValue.HasValue)
@@ -395,7 +395,7 @@ namespace Regulus.Database.Redis
             var fields = type.GetFields();
             foreach(var field in fields)
             {
-                if(field.IsPublic)
+                if(field.IsPublic && field.IsStatic == false)
                 {
                     var dbValue = _Database.HashGet(id, field.Name);
                     if (dbValue.HasValue)
@@ -403,10 +403,7 @@ namespace Regulus.Database.Redis
                         var fieldType = field.FieldType;
 
                         var value = _GetValue(fieldType, dbValue);
-                        field.SetValue(instance, new[]
-                            {
-                                value
-                        });
+                        field.SetValue(instance, value);
 
                     }
                 }
