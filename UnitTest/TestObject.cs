@@ -9,6 +9,8 @@ namespace RedisTest
 
         public int Value { get; set; }
 
+        public TestObject Field;
+
         public TestObject Child { get; set; }
     }
 }

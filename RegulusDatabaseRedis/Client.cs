@@ -84,7 +84,33 @@ namespace Regulus.Database.Redis
                         hashEntries.Add(value.Value);
                 }
             }
+
+            var fields = type.GetFields();
+            foreach(var field in fields)
+            {
+                if(field.IsPublic)
+                {
+                    var value = _GetHashEntryField(entry, field);
+                    if (value.HasValue)
+                        hashEntries.Add(value.Value);
+                }
+                
+            }
             return hashEntries.ToArray();
+        }
+
+        private HashEntry? _GetHashEntryField(object entry, FieldInfo field)
+        {
+            var val = field.GetValue(entry);
+            if(val != null)
+            {
+                var name = field.Name;
+                
+                var value = _Serialization(field.FieldType, val);
+
+                return new HashEntry(name, value);
+            }
+            return null;
         }
 
         private HashEntry? _GetHashEntry(object entry, PropertyInfo property)
@@ -300,25 +326,7 @@ namespace Regulus.Database.Redis
             }
         }
 
-        private void _DeleteProperty(Type type, HashEntry[] entrys)
-        {
-            var propertyNames = from p in type.GetProperties()
-                                where p.CanRead &&
-                                      !(Client._IsValueType(p.PropertyType))
-                                select new
-                                {
-                                    Name = p.Name,
-                                    PropertyType = p.PropertyType
-                                };
-            foreach (var entry in entrys)
-            {
-                var property = propertyNames.FirstOrDefault(p => p.Name == entry.Name);
-                if (property != null)
-                {
-                    _Delete(entry.Value, property.PropertyType);
-                }
-            }
-        }
+        
 
         private static bool _IsValueType(Type type)
         {
@@ -384,6 +392,26 @@ namespace Regulus.Database.Redis
                 }
             }
 
+            var fields = type.GetFields();
+            foreach(var field in fields)
+            {
+                if(field.IsPublic)
+                {
+                    var dbValue = _Database.HashGet(id, field.Name);
+                    if (dbValue.HasValue)
+                    {
+                        var fieldType = field.FieldType;
+
+                        var value = _GetValue(fieldType, dbValue);
+                        field.SetValue(instance, new[]
+                            {
+                                value
+                        });
+
+                    }
+                }
+                
+            }
             return instance;
         }
 

@@ -122,6 +122,30 @@ namespace RedisTest
         }
 
         [TestMethod]
+        public void TestMethod8()
+        {
+            var testObject1 = new TestObject();
+
+            testObject1.Value = 13451;
+
+            var testObject2 = new TestObject();
+
+            testObject2.Value = 13454651;
+
+            var id = Guid.NewGuid();
+            var testObject = new TestObject();
+            testObject.Id = id;
+            testObject.Value = 1345;
+            testObject.Child = testObject1;
+            testObject.Field = testObject2;
+
+            _Redis.Add(testObject);
+
+            var results = _Redis.GetField<TestObject, TestObject>(test_object => test_object.Id == id, o => o.Field);
+            Assert.AreEqual(13454651, results.First().Value );
+        }
+
+        [TestMethod]
         public void TestMethod999()
         {            
             var id = Guid.NewGuid();
