@@ -162,7 +162,8 @@ namespace Regulus.Database.Redis
         {
 
             var entrys = _Database.HashGetAll(redis_value.ToString());
-            int length = (int)entrys[0].Value;
+            
+            int length = _FindLength(entrys);
 
             var instance = Activator.CreateInstance(type, new object[] { length });
             Array array = (Array)instance;
@@ -178,6 +179,19 @@ namespace Regulus.Database.Redis
 
             return instance;
         }
+
+        private int _FindLength(HashEntry[] entrys)
+        {
+            for (int i = 0; i < entrys.Length; i++)
+            {
+                var entry = entrys[i];
+                var name = (string)entry.Name;
+                if (name == _ArrayLengthName)
+                    return (int)entry.Value;
+            }
+            return 0;
+        }
+
         private string _AddArray(Type type, object result)
         {
             var parent = Guid.NewGuid().ToString();

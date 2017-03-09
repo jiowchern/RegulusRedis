@@ -17,5 +17,7 @@ namespace RedisTest
         public TestObject Child { get; set; }
 
         public TestObject1 Field2;
+
+        public byte[] ByteArray;
     }
 }

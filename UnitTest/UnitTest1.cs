@@ -169,6 +169,67 @@ namespace RedisTest
             Assert.AreEqual(13454651, results.First().Value);
         }
 
+
+        [TestMethod]
+        public void TestMethod10()
+        {
+            var testObject1 = new TestObject();
+
+            var id = Guid.NewGuid();
+            testObject1.Id = id;
+            testObject1.Value = 13451;
+            testObject1.ByteArray = new byte[] {1,2,3,4,5,6,7,8,9,0};
+
+
+
+            _Redis.Add(testObject1);
+
+            var results = _Redis.Find<TestObject>((t) => t.Id == id);
+            var test = results.First();
+            Assert.AreEqual(1, test.ByteArray[0]);
+            Assert.AreEqual(2, test.ByteArray[1]);
+            Assert.AreEqual(3, test.ByteArray[2]);
+            Assert.AreEqual(4, test.ByteArray[3]);
+        }
+
+        [TestMethod]
+        public void TestMethod11()
+        {
+            var testObject1 = new TestObject();
+            var id = Guid.NewGuid();
+            testObject1.Id = id;
+            testObject1.Value = 13451;
+            testObject1.ByteArray = new byte[0] ;
+
+
+
+            _Redis.Add(testObject1);
+
+            var results = _Redis.Find<TestObject>((t) => t.Id == id);
+            var test = results.First();
+            Assert.AreEqual(0, test.ByteArray.Length);
+            
+        }
+
+        [TestMethod]
+        public void TestMethod12()
+        {
+            var testObject1 = new TestObject();
+            var id = Guid.NewGuid();
+            testObject1.Id = id;
+            testObject1.Value = 13451;
+            testObject1.ByteArray = null;
+
+
+
+            _Redis.Add(testObject1);
+
+            var results = _Redis.Find<TestObject>((t) => t.Id == id);
+            var test = results.First();
+            Assert.AreEqual(null, test.ByteArray );
+
+        }
+
         [TestMethod]
         public void TestMethod999()
         {            

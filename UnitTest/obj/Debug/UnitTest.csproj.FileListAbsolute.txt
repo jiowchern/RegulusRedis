@@ -10,3 +10,14 @@ D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Debug\StackExchange.Redis.pdb
 D:\Develop\RegulusDatabaseRedis\UnitTest\bin\Debug\StackExchange.Redis.xml
 D:\Develop\RegulusDatabaseRedis\UnitTest\obj\Debug\UnitTest.dll
 D:\Develop\RegulusDatabaseRedis\UnitTest\obj\Debug\UnitTest.pdb
+E:\Develop\C1-GameServer\RegulusRedis\UnitTest\bin\Debug\UnitTest.dll
+E:\Develop\C1-GameServer\RegulusRedis\UnitTest\bin\Debug\UnitTest.pdb
+E:\Develop\C1-GameServer\RegulusRedis\UnitTest\bin\Debug\Newtonsoft.Json.dll
+E:\Develop\C1-GameServer\RegulusRedis\UnitTest\bin\Debug\RegulusDatabaseRedis.dll
+E:\Develop\C1-GameServer\RegulusRedis\UnitTest\bin\Debug\StackExchange.Redis.dll
+E:\Develop\C1-GameServer\RegulusRedis\UnitTest\bin\Debug\RegulusDatabaseRedis.pdb
+E:\Develop\C1-GameServer\RegulusRedis\UnitTest\bin\Debug\Newtonsoft.Json.xml
+E:\Develop\C1-GameServer\RegulusRedis\UnitTest\bin\Debug\StackExchange.Redis.xml
+E:\Develop\C1-GameServer\RegulusRedis\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+E:\Develop\C1-GameServer\RegulusRedis\UnitTest\obj\Debug\UnitTest.dll
+E:\Develop\C1-GameServer\RegulusRedis\UnitTest\obj\Debug\UnitTest.pdb

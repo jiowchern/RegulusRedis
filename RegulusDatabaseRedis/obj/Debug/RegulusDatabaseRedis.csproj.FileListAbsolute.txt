@@ -6,3 +6,10 @@ D:\Develop\RegulusDatabaseRedis\RegulusDatabaseRedis\bin\Debug\StackExchange.Red
 D:\Develop\RegulusDatabaseRedis\RegulusDatabaseRedis\bin\Debug\StackExchange.Redis.xml
 D:\Develop\RegulusDatabaseRedis\RegulusDatabaseRedis\obj\Debug\RegulusDatabaseRedis.dll
 D:\Develop\RegulusDatabaseRedis\RegulusDatabaseRedis\obj\Debug\RegulusDatabaseRedis.pdb
+E:\Develop\C1-GameServer\RegulusRedis\RegulusDatabaseRedis\bin\Debug\RegulusDatabaseRedis.dll
+E:\Develop\C1-GameServer\RegulusRedis\RegulusDatabaseRedis\bin\Debug\RegulusDatabaseRedis.pdb
+E:\Develop\C1-GameServer\RegulusRedis\RegulusDatabaseRedis\bin\Debug\StackExchange.Redis.dll
+E:\Develop\C1-GameServer\RegulusRedis\RegulusDatabaseRedis\bin\Debug\StackExchange.Redis.xml
+E:\Develop\C1-GameServer\RegulusRedis\RegulusDatabaseRedis\obj\Debug\RegulusDatabaseRedis.csprojResolveAssemblyReference.cache
+E:\Develop\C1-GameServer\RegulusRedis\RegulusDatabaseRedis\obj\Debug\RegulusDatabaseRedis.dll
+E:\Develop\C1-GameServer\RegulusRedis\RegulusDatabaseRedis\obj\Debug\RegulusDatabaseRedis.pdb
