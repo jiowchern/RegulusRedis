@@ -170,8 +170,12 @@ namespace Regulus.Database.Redis
             if (array.Rank > 1)
                 throw new Exception("array rank not more than 1.");
 
-            foreach (var entry in entrys.Skip(1))
+            foreach (var entry in entrys)
             {
+                var name = (string)entry.Name;
+                if(name == _ArrayLengthName)
+                    continue;
+                
                 var index = (int)entry.Name;
                 if (index < length)
                     array.SetValue(_GetValue(type.GetElementType(), entry.Value), index);
